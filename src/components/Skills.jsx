@@ -5,6 +5,8 @@ import meter1 from "../assets/img/meter1.svg";
 import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
 import colorSharp from "../assets/img/color-sharp.png";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
 
 export const Skills = () => {
     const responsive = {
@@ -32,9 +34,15 @@ export const Skills = () => {
                 <Row>
                     <Col>
                         <div className="skill-bx">
-                            <h2>
-                            Skills
-                            </h2>
+                        <TrackVisibility>
+                            {({ isVisible}) => 
+                            <div className={isVisible ? "animate__animated animate__pulse animate__infinite" : ""}>     
+                                <h2 >
+                                Skills
+                                </h2>
+                            </div>
+                            }
+                        </TrackVisibility>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, veritatis est illum cum, nam labore quo aspernatur totam aliquam iure ipsam a ex sit dolorum animi ab. Debitis, architecto distinctio.</p>
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
                                 <div className="item">

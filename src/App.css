@@ -465,3 +465,12 @@ nav.navbar .navbar-toggler-icon{
   right: 0;
   z-index: -4;
 }
+
+.footer{
+  padding: 50px 0 50px 0;
+  background-image: url('./assets/img/footer-bg.png');
+  background-position:  center center;
+  background-size:  cover;
+  background-repeat: no-repeat;
+}
+
